@@ -1,0 +1,13 @@
+<!-- index.html -->
+{% load static %}
+<form id="search-form">
+    {% csrf_token %}
+    <!-- Input fields for search query and maximum number of pages -->
+    <input type="text" name="search_query" placeholder="Search query">
+    <input type="number" name="max_pages" placeholder="Max pages">
+    <button type="submit">Search</button>
+</form>
+
+<div id="results-container"></div>
+
+<script src="{% static 'js/main.js' %}"></script>
